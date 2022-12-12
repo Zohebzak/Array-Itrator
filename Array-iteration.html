@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arry iterator</title>
+    <script>
+        //   The filter() Methode:::
+
+        const val = [35, 4, 65, 74, 21, 12, 34, 4];
+        const filterd = val.filter(function (value, index, array) {
+            return value > 50
+        });
+        console.log("the value after filter:::", filterd);
+
+        // The map() Methode:::
+
+        const numb = [35, 4, 65, 74, 21, 12, 34, 4];
+        const mapped = numb.map(function (value, index, array) {
+            return value
+        });
+        console.log("the value after map::", mapped);
+
+
+        // The reduce() Methode:::
+
+        const arr = [35, 4, 65, 74, 21, 12, 34, 4, 100, 1];
+        const newarr = arr.reduce(function (sum, value, index, array) {
+            return sum + value
+        });
+        console.log(newarr);
+
+        //  The some() Method::
+        const arr1 = [35, 4, 65, 74, 21, 12, 34, 4, 100, 1];
+        const checkSome = arr1.some(function (value) {
+            return value > 70
+        });
+        console.log("the vlue is greater than 70::", checkSome);
+
+        //  The every() methode::
+        const arr2 = [35, 4, 65, 74, 21, 12, 34, 4, 100, 1];
+        const checkEvery = arr2.every(function (value) {
+            return value > 10
+        });
+        console.log(checkEvery);
+
+        //   The indexOf()::
+        
+        const arr3 = [35, 10, 4, 65, 10, 74, 21, 12, 34, 10, 4, 100, 35];
+        console.log("the index of search value is::", arr3.indexOf(35));
+
+        //    Finding Value all as 10 via forEach methode
+
+        const arr4 = [35, 10, 4, 65, 10, 74, 21, 12, 34, 10, 4, 100, 35];
+        console.log("the last index of search value is::", arr4.lastIndexOf(35));
+        const getValue = arr4.forEach(function (value, index) {
+            if (value == 10) {
+                console.log(index + "=" + value);
+            }
+        })
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
